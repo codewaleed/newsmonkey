@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 
 export default class App extends Component {
-  apikey = process.env.REACT_APP_NEWS_API
+  apikey = "6320c26bd01749d4b33c66769ba1e7b5"; //process.env.REACT_APP_NEWS_API
   pageSize = 20;
   state = {
     progress: 0,
@@ -27,12 +27,12 @@ export default class App extends Component {
 
           <Routes>
             <Route
-              
               path="/"
               element={
                 <News
                   key="sports"
-                  setProgress={this.setProgress} apikey={this.apikey}
+                  setProgress={this.setProgress}
+                  apikey={this.apikey}
                   pageSize={this.pageSize}
                   country="us"
                   category="sports"
@@ -41,12 +41,12 @@ export default class App extends Component {
             />
 
             <Route
-              
               path="business"
               element={
                 <News
                   key="business"
-                  setProgress={this.setProgress} apikey={this.apikey}
+                  setProgress={this.setProgress}
+                  apikey={this.apikey}
                   pageSize={this.pageSize}
                   country="us"
                   category="business"
@@ -55,12 +55,12 @@ export default class App extends Component {
             />
 
             <Route
-             
               path="entertainment"
               element={
                 <News
                   key="entertainment"
-                  setProgress={this.setProgress} apikey={this.apikey}
+                  setProgress={this.setProgress}
+                  apikey={this.apikey}
                   pageSize={this.pageSize}
                   country="us"
                   category="entertainment"
@@ -68,12 +68,12 @@ export default class App extends Component {
               }
             />
             <Route
-              
               path="technology"
               element={
                 <News
                   key="technology"
-                  setProgress={this.setProgress} apikey={this.apikey}
+                  setProgress={this.setProgress}
+                  apikey={this.apikey}
                   pageSize={this.pageSize}
                   country="us"
                   category="technology"
